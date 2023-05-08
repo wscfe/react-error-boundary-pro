@@ -1,5 +1,8 @@
-import React from 'react';
-import {FallbackProps} from './lib/ErrorBoundary';
+import React from "react";
+export interface FallbackProps {
+  error: Error;
+  resetErrorBoundary: () => void;
+}
 
 /**
  * 出错后现时的组件
@@ -7,12 +10,12 @@ import {FallbackProps} from './lib/ErrorBoundary';
  * @param resetErrorBoundary
  * @constructor
  */
-export const ErrorFallback = ({error, resetErrorBoundary}: FallbackProps) => {
+export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
   return (
     <div role="alert">
       <p>出错啦</p>
       <pre>{error.message}</pre>
       <button onClick={resetErrorBoundary}>Try again</button>
     </div>
-  )
-}
+  );
+};
