@@ -1,7 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect } from "react";
 import ErrorBoundary, { useErrorHandler } from "./ErrorBoundary";
-import MakeError from "../Error/MakeError";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
