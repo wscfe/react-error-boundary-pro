@@ -1,6 +1,6 @@
 import * as React from "react";
 
-interface ErrorBoundaryProps {
+export interface ErrorBoundaryProps {
   fallback?: React.ReactNode;
   onError?: (error: Error, info: string) => void;
   onReset?: () => void;
@@ -104,4 +104,5 @@ function useErrorHandler<P = Error>(
   return setError;
 }
 
-export { ErrorBoundary, withErrorBoundary, useErrorHandler };
+export { withErrorBoundary, useErrorHandler };
+export default ErrorBoundary;
